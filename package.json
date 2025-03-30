@@ -1,0 +1,19 @@
+{
+  "name": "medipad-backend",
+  "version": "1.0.0",
+  "description": "Backend for medipad app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GbemigadEngineer/Medipad-Backend-.git"
+  },
+  "author": "Oduwole Oluwagbemiga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GbemigadEngineer/Medipad-Backend-/issues"
+  },
+  "homepage": "https://github.com/GbemigadEngineer/Medipad-Backend-#readme"
+}
