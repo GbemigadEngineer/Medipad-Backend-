@@ -1,0 +1,64 @@
+API Endpoints:
+🔹 Auth System
+
+POST /register → Sign up users
+
+POST /login → Authenticate users
+
+POST /upgrade → Upgrade from Free to Pro
+
+🔹 Medical Record Management
+
+POST /records/create → Add a new fitness/medical record
+
+GET /records/:id → View a specific record
+
+GET /records → View past records (limited for Free, unlimited for Pro)
+
+DELETE /records/:id → Delete record (Admin only)
+
+🔹 User Management
+
+GET /profile → Get user details
+
+PUT /profile/update → Update user info
+
+🔹 Payment Handling (Future Feature)
+
+POST /payments/subscribe → Handle Pro plan payments
+
+GET /payments/status → Check payment status
+
+
+
+///////////////////
+
+3️⃣ Core Modules
+🔹 User Management
+
+Signup/Login (JWT Authentication)
+
+Role-based access (Free User, Pro User, Admin)
+
+Profile management
+
+🔹 Medical & Fitness Records
+
+Create/Edit/View records
+
+Track fitness history
+
+Generate PDF reports
+
+🔹 Subscription Management (For Pro Users)
+
+Plan selection
+
+Payment processing (future)
+
+🔹 Admin Dashboard (For Pro Accounts)
+
+Manage users in an organization
+
+View reports and analytics
+
