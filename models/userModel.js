@@ -20,9 +20,13 @@ const UserSchema = mongoose.Schema({
     required: [true, "A user must set a password!"],
   },
   plan: {
-    type: Enumerator,
+    type: String,
+    enum: {
+      values: ["free", "pro"], // <- valid values for the field
+    },
     required: true,
   },
+
   active: {
     type: Boolean,
     default: true,
