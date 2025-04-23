@@ -1,37 +1,33 @@
 const mongoose = require("mongoose");
 
-const UserSchema = mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, "A User must have a name!"],
-    trim: true,
-  },
-  email: {
-    type: String,
-    required: [true, "A User must have an email address!"],
-    unique: [true, "A users Email must be unique!"],
-  },
-  phonenumber: {
-    type: Number,
-    required: [true, "A user must have a phone Number"],
-  },
-  password: {
-    type: String,
-    required: [true, "A user must set a password!"],
-  },
-  plan: {
-    type: String,
-    enum: {
-      values: ["free", "pro"], // <- valid values for the field
+const UserSchema = mongoose.Schema(
+  {
+    name: { type: String, required: [true, "Name is required"], trim: true },
+    password: {
+      type: String,
+      required: [true, "Password is required"],
+      trim: true,
+      minLength: [6, "Password must be at least 6 characters"],
     },
-    required: true,
+    email: {
+      type: String,
+      required: [true, "Email is required"],
+      trim: true,
+      unique: [true, "Email already exists"],
+    },
+    plan: {
+      type: String,
+      enum: ["basic", "pro"],
+      default: "basic",
+    },
+    proffession: {
+      type: String,
+    },
+    createdAt: { type: Date, default: Date.now },
   },
+  { timestamps: true }
+);
 
-  active: {
-    type: Boolean,
-    default: true,
-  },
-});
 
 const User = mongoose.model("User", UserSchema);
 
